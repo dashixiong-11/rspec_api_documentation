@@ -87,7 +87,6 @@ module RspecApiDocumentation
 
     def record_response_body(response_content_type, response_body)
       return nil if response_body.empty?
-
       formatter = RspecApiDocumentation.configuration.response_body_formatter
       return formatter.call(response_content_type, response_body)
     end
